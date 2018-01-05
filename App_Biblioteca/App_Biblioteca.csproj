@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{00E0EB9F-2C46-4C18-B188-428F0471BFEC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>App_Biblioteca</RootNamespace>
+    <AssemblyName>App_Biblioteca</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.10.5\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Autor.cs" />
+    <Compile Include="Conexao.cs" />
+    <Compile Include="Editora.cs" />
+    <Compile Include="FormAcesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAcesso.Designer.cs">
+      <DependentUpon>FormAcesso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAutor.Designer.cs">
+      <DependentUpon>FormAutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBiblioteca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBiblioteca.Designer.cs">
+      <DependentUpon>FormBiblioteca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCliente.Designer.cs">
+      <DependentUpon>FormCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditora.Designer.cs">
+      <DependentUpon>FormEditora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEmprestimo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEmprestimo.Designer.cs">
+      <DependentUpon>FormEmprestimo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFuncionario.Designer.cs">
+      <DependentUpon>FormFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGenero.Designer.cs">
+      <DependentUpon>FormGenero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLivro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLivro.Designer.cs">
+      <DependentUpon>FormLivro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Genero.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAcesso.resx">
+      <DependentUpon>FormAcesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAutor.resx">
+      <DependentUpon>FormAutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBiblioteca.resx">
+      <DependentUpon>FormBiblioteca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCliente.resx">
+      <DependentUpon>FormCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditora.resx">
+      <DependentUpon>FormEditora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEmprestimo.resx">
+      <DependentUpon>FormEmprestimo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFuncionario.resx">
+      <DependentUpon>FormFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGenero.resx">
+      <DependentUpon>FormGenero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLivro.resx">
+      <DependentUpon>FormLivro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="docs\MySqlCommand.xml" />
+    <Content Include="docs\MySqlCommandBuilder.xml" />
+    <Content Include="docs\MySqlConnection.xml" />
+    <Content Include="docs\MySqlConnectionStringBuilder.xml" />
+    <Content Include="docs\MySqlDataAdapter.xml" />
+    <Content Include="docs\MySqlDataReader.xml" />
+    <Content Include="docs\MySqlException.xml" />
+    <Content Include="docs\MySqlHelper.xml" />
+    <Content Include="docs\MySqlParameter.xml" />
+    <Content Include="docs\MySqlParameterCollection.xml" />
+    <Content Include="docs\MySqlTransaction.xml" />
+    <None Include="Resources\Biblioteca_logo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
